@@ -7,6 +7,7 @@ import "./UserProfile.css";
 function UserProfile() {
     const [users, setUsers] = useState([]);
 
+    // Fetch all users from the firebase store 
     const fetchUsers = async () => {
         try {
             const q = query(collection(db, "users"));

@@ -1,0 +1,6 @@
+.side-navbar {
+    height: 100%;
+    position: fixed;
+    background-color: #F7F7F7;
+    transition: 0.5s;
+}

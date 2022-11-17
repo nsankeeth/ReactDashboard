@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
-import { auth, db, logout } from "./firebase";
+import { auth, db } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
+import SideMenu from "./SideMenu";
+import Navbar from "./Navbar";
 import Card from "./Card";
 import UserProfile from "./UserProfile";
 import UserList from "./UserList";
@@ -35,20 +37,19 @@ function Dashboard() {
   }, [user, loading]);
 
   return (
-    <div className="dashboard">
-      <Card
-        title={"User Profile"}>
-        <UserProfile
-          user={user} />
-      </Card>
-      <Card
-        title={"User List"}>
-        <UserList />
-      </Card>
-      <div className="dashboard__container">
-        <button className="dashboard__btn" onClick={logout}>
-          Logout
-        </button>
+    <div>
+      <SideMenu />
+      <div className="p-2 dashboard-container">
+        <Navbar />
+        <Card
+          title={"User Profile"}>
+          <UserProfile
+            user={user} />
+        </Card>
+        <Card
+          title={"User List"}>
+          <UserList />
+        </Card>
       </div>
     </div>
   );
