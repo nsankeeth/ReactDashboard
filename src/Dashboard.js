@@ -41,15 +41,23 @@ function Dashboard() {
       <SideMenu />
       <div className="p-2 dashboard-container">
         <Navbar />
-        <Card
-          title={"User Profile"}>
-          <UserProfile
-            user={user} />
-        </Card>
-        <Card
-          title={"User List"}>
-          <UserList />
-        </Card>
+        <div>
+          <div className="row">
+            <div className="col-md-6 mb-2">
+              <Card
+                title={"User Profile"}>
+                <UserProfile
+                  user={user} />
+              </Card>
+            </div>
+            <div className="col-md-6 mb-2">
+              <Card
+                title={"User List"}>
+                <UserList />
+              </Card>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { query, collection, getDocs } from "firebase/firestore";
 
-import "./UserProfile.css";
+import "./UserList.css";
 
-function UserProfile() {
+function UserList() {
     const [users, setUsers] = useState([]);
 
     // Fetch all users from the firebase store 
@@ -34,7 +34,7 @@ function UserProfile() {
     });
 
     return (
-        <div>
+        <div className="table-container">
             <table className="table">
                 <thead>
                     <tr>
@@ -57,4 +57,4 @@ function UserProfile() {
     );
 };
 
-export default UserProfile;
+export default UserList;
