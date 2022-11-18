@@ -26,7 +26,7 @@ function NewsPage() {
   // fetch data from api then update state
   useEffect(() => {
     fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_13636e4a5fefa25ea91437bb78e6028bd977c&language=en"
+      "https://newsdata.io/api/1/news?apikey=pub_1364014f6a595e6f99cad56f9b56082fd9b7a&language=en"
     )
       .then((res) => res.json())
       .then((data) => {
