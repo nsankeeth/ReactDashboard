@@ -8,8 +8,8 @@ import Card from "./Card";
 function NewsList({ data }) {
   return (
     <div>
-      {data.slice(0, 20).map((news) => (
-        <div style={{ paddingBottom: 40 }}>
+      {data.slice(0, 20).map((news, index) => (
+        <div style={{ paddingBottom: 40 }} key={index} >
           <h5>{news.title}</h5>
           <p>{news.description}</p>
           <a>{news.link}</a>

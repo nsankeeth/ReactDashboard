@@ -51,7 +51,7 @@ function Calculator() {
   return (
     <div style={styles.container}>
       <div style={styles.expr}>
-        <text>{expr}</text>
+        <span>{expr}</span>
       </div>
       <div>
         <div style={styles.row}>
@@ -173,8 +173,8 @@ function Notes() {
   return (
     <div style={styles.container}>
       {Array.from(notes).map(([key, value]) => (
-        <div>
-          <div style={styles.note} key={key}>
+        <div key={key}>
+          <div style={styles.note}>
             {value}
           </div>
           <button

@@ -65,8 +65,8 @@ function PokemonPage() {
   function PokemonList({ pokemons }) {
     return (
       <div>
-        {pokemons.map((pokemon) => (
-          <div style={{ paddingBottom: 40 }}>
+        {pokemons.map((pokemon, index) => (
+          <div style={{ paddingBottom: 40 }} key={index}>
             <h5>{pokemon.name}</h5>
             <img src={pokemon.sprites.front_default} />
           </div>

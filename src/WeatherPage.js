@@ -86,7 +86,7 @@ const WeatherPage = () => {
 
             <div className="mt-3 d-flex flex-column justify-content-center align-items-center">
               <div className="col-auto">
-                <label for="location" className="col-form-label">
+                <label htmlFor="location" className="col-form-label">
                   Enter Other Location:
                 </label>
               </div>
