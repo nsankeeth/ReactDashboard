@@ -42,39 +42,39 @@ const WeatherPage = () => {
         <Navbar />
         <div>
           <Card title="Weather">
-            <div class="card-body text-center">
+            <div className="card-body text-center">
               <img
                 id="weather-icon"
                 src={`http://openweathermap.org/img/w/${data?.weather[0]?.icon}.png`}
                 alt="weather status icon"
-                class="weather-icon"
+                className="weather-icon"
               />
 
-              <p class="h2" id="temperature">
+              <p className="h2" id="temperature">
                 {kelvinToCelsius(data?.main?.temp)}&deg;C
               </p>
 
-              <p class="h5">
-                <i class="fas fa-map-marker-alt"></i>
+              <p className="h5">
+                <i className="fas fa-map-marker-alt"></i>
                 <strong id="location-title">{data?.name}</strong>
               </p>
 
-              <div class="row mt-4">
-                <div class="col-md-6">
+              <div className="row mt-4">
+                <div className="col-md-6">
                   <p>
-                    <i class="fas fa-temperature-low"></i>
+                    <i className="fas fa-temperature-low"></i>
                     <strong id="min-temp">
                       Min: {kelvinToCelsius(data?.main?.temp_min)}&deg;C{" "}
                     </strong>
                   </p>
                   <p>
-                    <i class="fas fa-temperature-high"></i>
+                    <i className="fas fa-temperature-high"></i>
                     <strong id="max-temp">
                       Max: {kelvinToCelsius(data?.main?.temp_max)}&deg;C{" "}
                     </strong>
                   </p>
                 </div>
-                <div class="col-md-6">
+                <div className="col-md-6">
                   <p>
                     <strong id="visibility">
                       Visibility: {data?.weather[0]?.main}
@@ -84,17 +84,17 @@ const WeatherPage = () => {
               </div>
             </div>
 
-            <div class="mt-3 d-flex flex-column justify-content-center align-items-center">
-              <div class="col-auto">
-                <label for="location" class="col-form-label">
+            <div className="mt-3 d-flex flex-column justify-content-center align-items-center">
+              <div className="col-auto">
+                <label for="location" className="col-form-label">
                   Enter Other Location:
                 </label>
               </div>
-              <div class="col-auto">
-                <input type="text" id="location" class="form-control" />
+              <div className="col-auto">
+                <input type="text" id="location" className="form-control" />
               </div>
               <button
-                class="btn btn-primary mt-2"
+                className="btn btn-primary mt-2"
                 onClick={handleWeatherButtonClick}
               >
                 Go
